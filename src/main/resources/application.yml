@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: vybefest-api
+
+server:
+  port: ${SERVER_PORT:8080}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: never
+
+info:
+  app:
+    name: VybeFest API
+    description: Festival ticketing backend
